@@ -1,0 +1,87 @@
+--> Strings In Java
+
+What is a String ?
+-->String is a sequence of characters and it is a class in java but
+   considered as a literal because of its unique behavior.
+
+Different ways to create a String!
+--> String s1 = "Hello";
+--> String s2 = new String("Hello");
+
+Why it is called literal?
+-->When we create a String object, the value in the parentheses () 
+   can be printed directly, and we can assign values to String variables 
+   just like primitive data types. Strings can be created using string literals 
+   (e.g., String name = "John") or using the new keyword with a constructor 
+   (e.g., String name = new String("John")).
+
+-->Program 1 :- 
+   public class Demo{
+     public static void main(String[] args){
+     
+       String s1 = "Krishna";
+       String s2 = new String("Hello");  
+       
+       System.out.println(s1);
+       System.out.println(s2);
+       
+       System.out.println(new Demo());  
+       // we can directly print the Object Memory(#code)
+     }
+   }
+   
+-->Program 2 :- 
+   public class Demo{
+     public static void main(String[] args){
+     
+       String s1 = "Hello";                      //String Pool
+       String s2 = new String("Hello");          //Heap Memory
+        
+       String s3 = "Hello";
+       String s4 = new String("Hello");
+       
+       String s5 = "ABCD";
+       String s6 = new String("ABCD");  
+       
+       System.out.println(s1==s2);  
+       //false --- Two String Memory Locations are different
+       
+       System.out.println(s1==s3);  
+       //true  --- Two String Memory Locations are same by searching the value it will override in same location
+       
+       System.out.println(s1==s5);  
+       //false --- Two String Memory Locations are different but it is in same container (memory will locate based on value)
+       
+       System.out.println(s2==s4);  
+       //false --- When two String objects have the same value, they may still occupy different memory locations. Even if the container (object) is the same, memory is automatically allocated when the object is created.
+       
+       System.out.println(s1.equals(s2))  
+       //true  ---  '==' To compare memory 'equals(method)' To compare value
+     }
+   }  
+   
+--> String Methods
+	. startsWith
+	. endsWith
+	. contains
+	. equals
+	. equalsIgnoreCase
+	. length
+	. trim	
+	. toCharArray
+	. toLowerCase
+	. toUpperCase
+	. indexOf
+	. lastIndexOf
+	. subString
+	. split
+	. charAt
+	
+	
+	
+	
+	
+	
+	
+	
+	   
