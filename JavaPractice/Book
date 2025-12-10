@@ -76,8 +76,14 @@ Why it is called literal?
 	. subString
 	. split
 	. charAt
+	. replace
+	. replaceAll
+	. valuOff
+	. isEmpty
+	. isBlank
 	
-	
+--> When we take(Print) Index from String we get '-1' 
+    (it means there is no character in that index place)
 	
 	
 	
