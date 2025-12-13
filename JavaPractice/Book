@@ -78,16 +78,80 @@ Why it is called literal?
 	. charAt
 	. replace
 	. replaceAll
-	. valuOff
+	. valueOff
 	. isEmpty
 	. isBlank
 	
 --> When we take(Print) Index from String we get '-1' 
     (it means there is no character in that index place)
 	
+What is Static Block and Non-Static Block in Java?
+-->In Java, a static block runs before the main method when the class is loaded.  
+   A non-static block runs when an object is created, right before the constructor 
+   is called.  
+   
+-->Program:-
+  
+   int number;
 	
+	static {
+		System.out.println("Static Block");
+	}
 	
+	{
+		System.out.println("Non-Static Block");
+	}
 	
+	public Test2(){
+		System.out.println("Constructor");
+		number = 20;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Method");
+		new Test2();
+		Test2 t2 = new Test2();
+		System.out.println(t2.number);
+		
+	}   
+	
+--> var keyword introduced after version-10	
+
+What is Type Inference?
+-->Type inference is a concept in which compiler the infers the type of the variable 
+   using the value provided
+   
+--> var keyword restrictions   
+   . This type inference is restricted to local variables(in method,in constructor or particular block)
+   . var only used for only declaration purpose (when you creating the variable value should be initialized)
+   . when we are using var keyword for array we can't use brackets([])
+   . we shouldn't use var keyword at parameters
+
+	 public static void main(String[[] args){
+	    var i;
+	    i =10;                    // only var keyword when used declaration purpose(can't assign value later)
+	    
+	    // int i = 10000;
+	    var i = 10000;
+	    // String s1 = "Rama Krishna";
+	    var s1 = "Rama Krishna";
+	    // boolean b1 = true;
+	    var b1 = true;
+	    
+	    System.out.println(i /n s1 /n b1)
+	    
+	    var b = new Book();        //class instance is a object
+	    int var = 10;              //var keyword can used as a variable name(reserved keywords/data types are not allowed)
+	    var var = 10;
+	    
+	    int[] arr = new int[5];
+	    var arr = new int[5];
+	    
+	    int[] arr = {1, 2, 3};
+	    var arr = {1, 2, 3};       // we shouldn't initialize directly when we using var keyword
+	    var arr = new int[]{1, 2, 3};
+	 }	
 	
 	
 	   
